@@ -12,6 +12,7 @@ struct CurrenciatorApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(NetworkConnection())
         }
     }
 }

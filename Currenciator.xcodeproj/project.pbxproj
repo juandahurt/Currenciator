@@ -16,6 +16,8 @@
 		3D81A39D25D375DA00C9DA40 /* NumericKeypad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D81A39C25D375DA00C9DA40 /* NumericKeypad.swift */; };
 		3D81A3A625D3787300C9DA40 /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3D81A3A525D3787300C9DA40 /* Poppins-SemiBold.ttf */; };
 		3D81A3A925D379A100C9DA40 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3D81A3A825D379A100C9DA40 /* Poppins-Regular.ttf */; };
+		3D81A3AE25D37BF100C9DA40 /* NetworkErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D81A3AD25D37BF100C9DA40 /* NetworkErrorView.swift */; };
+		3D81A3B125D3821100C9DA40 /* NetworkConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D81A3B025D3821100C9DA40 /* NetworkConnection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		3D81A39C25D375DA00C9DA40 /* NumericKeypad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumericKeypad.swift; sourceTree = "<group>"; };
 		3D81A3A525D3787300C9DA40 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
 		3D81A3A825D379A100C9DA40 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
+		3D81A3AD25D37BF100C9DA40 /* NetworkErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrorView.swift; sourceTree = "<group>"; };
+		3D81A3B025D3821100C9DA40 /* NetworkConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConnection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +98,7 @@
 		3D81A39025D36DCD00C9DA40 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				3D81A3B025D3821100C9DA40 /* NetworkConnection.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -111,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				3D81A39625D3700400C9DA40 /* CurrenciatorView.swift */,
+				3D81A3AD25D37BF100C9DA40 /* NetworkErrorView.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -207,6 +213,8 @@
 				3D81A39725D3700400C9DA40 /* CurrenciatorView.swift in Sources */,
 				3D81A38025D36BA900C9DA40 /* CurrenciatorApp.swift in Sources */,
 				3D81A39225D36E0A00C9DA40 /* RoundedContainer.swift in Sources */,
+				3D81A3B125D3821100C9DA40 /* NetworkConnection.swift in Sources */,
+				3D81A3AE25D37BF100C9DA40 /* NetworkErrorView.swift in Sources */,
 				3D81A39D25D375DA00C9DA40 /* NumericKeypad.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

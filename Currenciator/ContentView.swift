@@ -7,8 +7,18 @@
 
 import SwiftUI
 
+import Network
+
 struct ContentView: View {
+    @EnvironmentObject private var networkConnection: NetworkConnection
+    
     var body: some View {
-        CurrenciatorView()
+        Group {
+            if networkConnection.isConnected {
+                CurrenciatorView()
+            } else {
+                NetworkErrorView()
+            }
+        }
     }
 }

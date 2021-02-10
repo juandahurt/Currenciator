@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct CurrenciatorView: View {
+    @State private var value: Double = 0.0
+    
     var background: some View {
         VStack {
             Rectangle()
@@ -26,7 +28,7 @@ struct CurrenciatorView: View {
                 RoundedContainer() {
                     Text("Holi")
                 }.padding(.bottom, 30)
-                NumericKeypad()
+                NumericKeypad(value: $value)
                 Spacer()
             }
         }
