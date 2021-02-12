@@ -19,10 +19,10 @@ struct RoundedContainer<Content>: View where Content: View {
             RoundedRectangle(cornerRadius: 15)
                 .fill(Color.white)
                 .frame(maxHeight: 221)
+                .shadow(color: Color.black.opacity(0.05), radius: 8, x: 0, y: 4)
             content
                 .padding(20)
         }
-        .shadow(color: Color.black.opacity(0.05), radius: 8, x: 0, y: 4)
         .padding(.top, 72)
         .padding(.horizontal, 20)
     }

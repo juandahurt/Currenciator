@@ -15,10 +15,14 @@ struct ContentView: View {
     var body: some View {
         Group {
             if networkConnection.isConnected {
-                CurrenciatorView()
+                CurrenciatorView(
+                    converterVM: ConverterVM(
+                        converter: Converter(currencyA: .test, currencyB: .test)
+                    )
+                )
             } else {
                 NetworkErrorView()
             }
-        }
+        }.ignoresSafeArea(.all, edges: .bottom)
     }
 }

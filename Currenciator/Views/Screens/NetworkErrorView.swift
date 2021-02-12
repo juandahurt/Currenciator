@@ -18,6 +18,7 @@ struct NetworkErrorView: View {
                     .multilineTextAlignment(.center)
                     .font(.custom("Poppins-Regular", size: 18))
             }
+            .foregroundColor(.white)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color("Blue"))
