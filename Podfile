@@ -6,5 +6,5 @@ target 'Currenciator' do
   use_frameworks!
 
   # Pods for Currenciator
-
+  pod 'Alamofire', '~> 5.2'
 end

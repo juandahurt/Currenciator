@@ -3,12 +3,16 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3D46CE3125D488600024EC30 /* DecimalNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D46CE3025D488600024EC30 /* DecimalNumber.swift */; };
+		3D00139A25D6E6A2006DAE4E /* CountriesModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D00139925D6E6A2006DAE4E /* CountriesModal.swift */; };
+		3D0013A725D6E8DD006DAE4E /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0013A625D6E8DD006DAE4E /* Networking.swift */; };
 		3D46CE3425D490A60024EC30 /* CurrencyField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D46CE3325D490A60024EC30 /* CurrencyField.swift */; };
+		3D551D6425D6EB8100677C9C /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D551D6325D6EB8100677C9C /* Country.swift */; };
+		3D551D6725D6F3B700677C9C /* ServerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D551D6625D6F3B700677C9C /* ServerResponse.swift */; };
+		3D551D6A25D7199800677C9C /* CountryVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D551D6925D7199800677C9C /* CountryVM.swift */; };
 		3D81A38025D36BA900C9DA40 /* CurrenciatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D81A37F25D36BA900C9DA40 /* CurrenciatorApp.swift */; };
 		3D81A38225D36BA900C9DA40 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D81A38125D36BA900C9DA40 /* ContentView.swift */; };
 		3D81A38425D36BAB00C9DA40 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D81A38325D36BAB00C9DA40 /* Assets.xcassets */; };
@@ -23,11 +27,17 @@
 		3DC7C67425D47FB4007762A1 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC7C67325D47FB4007762A1 /* Currency.swift */; };
 		3DC7C67725D48012007762A1 /* Converter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC7C67625D48012007762A1 /* Converter.swift */; };
 		3DC7C67C25D482D2007762A1 /* ConverterVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC7C67B25D482D2007762A1 /* ConverterVM.swift */; };
+		4FD41D950D3852BC20B58558 /* Pods_Currenciator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96D455D5ED23D01832253399 /* Pods_Currenciator.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3D46CE3025D488600024EC30 /* DecimalNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecimalNumber.swift; sourceTree = "<group>"; };
+		082E592F99E9F51D5F2D07BE /* Pods-Currenciator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Currenciator.debug.xcconfig"; path = "Target Support Files/Pods-Currenciator/Pods-Currenciator.debug.xcconfig"; sourceTree = "<group>"; };
+		3D00139925D6E6A2006DAE4E /* CountriesModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesModal.swift; sourceTree = "<group>"; };
+		3D0013A625D6E8DD006DAE4E /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		3D46CE3325D490A60024EC30 /* CurrencyField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyField.swift; sourceTree = "<group>"; };
+		3D551D6325D6EB8100677C9C /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		3D551D6625D6F3B700677C9C /* ServerResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerResponse.swift; sourceTree = "<group>"; };
+		3D551D6925D7199800677C9C /* CountryVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryVM.swift; sourceTree = "<group>"; };
 		3D81A37C25D36BA900C9DA40 /* Currenciator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Currenciator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D81A37F25D36BA900C9DA40 /* CurrenciatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrenciatorApp.swift; sourceTree = "<group>"; };
 		3D81A38125D36BA900C9DA40 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -44,6 +54,8 @@
 		3DC7C67325D47FB4007762A1 /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
 		3DC7C67625D48012007762A1 /* Converter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Converter.swift; sourceTree = "<group>"; };
 		3DC7C67B25D482D2007762A1 /* ConverterVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConverterVM.swift; sourceTree = "<group>"; };
+		92E9F704B3C2616533C629F1 /* Pods-Currenciator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Currenciator.release.xcconfig"; path = "Target Support Files/Pods-Currenciator/Pods-Currenciator.release.xcconfig"; sourceTree = "<group>"; };
+		96D455D5ED23D01832253399 /* Pods_Currenciator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Currenciator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,17 +63,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FD41D950D3852BC20B58558 /* Pods_Currenciator.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2D5AB0D07760EC52F0A6D51D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				96D455D5ED23D01832253399 /* Pods_Currenciator.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		3D81A37325D36BA900C9DA40 = {
 			isa = PBXGroup;
 			children = (
 				3D81A37E25D36BA900C9DA40 /* Currenciator */,
 				3D81A37D25D36BA900C9DA40 /* Products */,
+				4059F9EFE52029D0072C333C /* Pods */,
+				2D5AB0D07760EC52F0A6D51D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -104,6 +127,7 @@
 				3D81A39125D36E0A00C9DA40 /* RoundedContainer.swift */,
 				3D81A39C25D375DA00C9DA40 /* NumericKeypad.swift */,
 				3D46CE3325D490A60024EC30 /* CurrencyField.swift */,
+				3D00139925D6E6A2006DAE4E /* CountriesModal.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -114,7 +138,7 @@
 				3D81A3B025D3821100C9DA40 /* NetworkConnection.swift */,
 				3DC7C67325D47FB4007762A1 /* Currency.swift */,
 				3DC7C67625D48012007762A1 /* Converter.swift */,
-				3D46CE3025D488600024EC30 /* DecimalNumber.swift */,
+				3D551D6325D6EB8100677C9C /* Country.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -157,6 +181,8 @@
 		3DC7C67925D481CC007762A1 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				3D0013A625D6E8DD006DAE4E /* Networking.swift */,
+				3D551D6625D6F3B700677C9C /* ServerResponse.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -165,8 +191,18 @@
 			isa = PBXGroup;
 			children = (
 				3DC7C67B25D482D2007762A1 /* ConverterVM.swift */,
+				3D551D6925D7199800677C9C /* CountryVM.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		4059F9EFE52029D0072C333C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				082E592F99E9F51D5F2D07BE /* Pods-Currenciator.debug.xcconfig */,
+				92E9F704B3C2616533C629F1 /* Pods-Currenciator.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,9 +212,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3D81A38B25D36BAB00C9DA40 /* Build configuration list for PBXNativeTarget "Currenciator" */;
 			buildPhases = (
+				B6CF036CE04F0E25296A76A6 /* [CP] Check Pods Manifest.lock */,
 				3D81A37825D36BA900C9DA40 /* Sources */,
 				3D81A37925D36BA900C9DA40 /* Frameworks */,
 				3D81A37A25D36BA900C9DA40 /* Resources */,
+				5EE859517DD27EB9B6EBD9E9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -235,22 +273,68 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5EE859517DD27EB9B6EBD9E9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Currenciator/Pods-Currenciator-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Currenciator/Pods-Currenciator-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Currenciator/Pods-Currenciator-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B6CF036CE04F0E25296A76A6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Currenciator-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3D81A37825D36BA900C9DA40 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				3D81A38225D36BA900C9DA40 /* ContentView.swift in Sources */,
+				3D0013A725D6E8DD006DAE4E /* Networking.swift in Sources */,
+				3D00139A25D6E6A2006DAE4E /* CountriesModal.swift in Sources */,
 				3D81A39725D3700400C9DA40 /* CurrenciatorView.swift in Sources */,
 				3D81A38025D36BA900C9DA40 /* CurrenciatorApp.swift in Sources */,
+				3D551D6725D6F3B700677C9C /* ServerResponse.swift in Sources */,
 				3D81A39225D36E0A00C9DA40 /* RoundedContainer.swift in Sources */,
 				3DC7C67725D48012007762A1 /* Converter.swift in Sources */,
 				3DC7C67425D47FB4007762A1 /* Currency.swift in Sources */,
-				3D46CE3125D488600024EC30 /* DecimalNumber.swift in Sources */,
 				3DC7C67C25D482D2007762A1 /* ConverterVM.swift in Sources */,
+				3D551D6A25D7199800677C9C /* CountryVM.swift in Sources */,
 				3D81A3B125D3821100C9DA40 /* NetworkConnection.swift in Sources */,
 				3D46CE3425D490A60024EC30 /* CurrencyField.swift in Sources */,
 				3D81A3AE25D37BF100C9DA40 /* NetworkErrorView.swift in Sources */,
+				3D551D6425D6EB8100677C9C /* Country.swift in Sources */,
 				3D81A39D25D375DA00C9DA40 /* NumericKeypad.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -376,6 +460,7 @@
 		};
 		3D81A38C25D36BAB00C9DA40 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 082E592F99E9F51D5F2D07BE /* Pods-Currenciator.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -398,6 +483,7 @@
 		};
 		3D81A38D25D36BAB00C9DA40 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 92E9F704B3C2616533C629F1 /* Pods-Currenciator.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

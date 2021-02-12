@@ -9,15 +9,12 @@ import SwiftUI
 
 struct CurrencyField: View {
     var text: String
-    var isEditable: Bool
+    var backgroundColor: Color
     
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 10)
-                .fill(Color("Background"))
-                .frame(maxHeight: 50)
-            RoundedRectangle(cornerRadius: 10)
-                .stroke(isEditable ? Color("Blue") : Color.clear, lineWidth: 2)
+                .fill(backgroundColor)
                 .frame(maxHeight: 50)
             Text(text)
                 .foregroundColor(Color("Black"))

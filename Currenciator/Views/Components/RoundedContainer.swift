@@ -23,7 +23,6 @@ struct RoundedContainer<Content>: View where Content: View {
             content
                 .padding(20)
         }
-        .padding(.top, 72)
         .padding(.horizontal, 20)
     }
 }
