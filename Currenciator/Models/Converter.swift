@@ -8,13 +8,15 @@
 import Foundation
 
 struct Converter {
-    var currencyA: Currency
-    var currencyB: Currency
+    var countryA: Country = .us
+    var countryB: Country = .uk
     var value: Int = 0
     var result: Double = 0.0
     
-    mutating func convert(completion: @escaping () -> Void) {
-        result = 100.0
-        completion()
+    mutating func convert(completion: @escaping (ConversionServerResponse) -> Void) {
+        var networking = Networking()
+        let parameterKey = countryA.currencyId + "_" + countryB.currencyId
+        networking.parameters?.updateValue(parameterKey, forKey: "q")
+        networking.get("/convert", completion: completion)
     }
 }

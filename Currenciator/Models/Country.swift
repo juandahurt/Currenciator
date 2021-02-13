@@ -17,6 +17,13 @@ struct Country: Decodable, Identifiable {
     }
 }
 
+
+extension Country {
+    static let us = Country(id: "us", name: "United States Of America", currencyId: "USD")
+    static let uk = Country(id: "uk", name: "United Kingdom", currencyId: "GBP")
+}
+
+
 extension Country {
     static func handleFlagImageName(of country: Country) -> String {
         // Existen algunas banderas cuyo nombre de archivo es muy diferente a los nombres

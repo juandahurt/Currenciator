@@ -10,7 +10,7 @@ import Network
 
 class NetworkConnection: ObservableObject {
     private var monitor: NWPathMonitor = NWPathMonitor()
-    var isConnected: Bool = false
+    var isConnected: Bool = true
     
     init() {
         monitor.pathUpdateHandler = updateNetworkConnection

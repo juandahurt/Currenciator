@@ -10,3 +10,7 @@ import Foundation
 struct CountryServerResponse: Decodable {
     var results: [String: Country]
 }
+
+struct ConversionServerResponse: Decodable {
+    var results: [String: Conversion]
+}

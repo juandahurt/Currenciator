@@ -13,6 +13,7 @@
 		3D551D6425D6EB8100677C9C /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D551D6325D6EB8100677C9C /* Country.swift */; };
 		3D551D6725D6F3B700677C9C /* ServerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D551D6625D6F3B700677C9C /* ServerResponse.swift */; };
 		3D551D6A25D7199800677C9C /* CountryVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D551D6925D7199800677C9C /* CountryVM.swift */; };
+		3D551D6F25D73EF300677C9C /* Conversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D551D6E25D73EF300677C9C /* Conversion.swift */; };
 		3D81A38025D36BA900C9DA40 /* CurrenciatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D81A37F25D36BA900C9DA40 /* CurrenciatorApp.swift */; };
 		3D81A38225D36BA900C9DA40 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D81A38125D36BA900C9DA40 /* ContentView.swift */; };
 		3D81A38425D36BAB00C9DA40 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D81A38325D36BAB00C9DA40 /* Assets.xcassets */; };
@@ -24,7 +25,6 @@
 		3D81A3A925D379A100C9DA40 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3D81A3A825D379A100C9DA40 /* Poppins-Regular.ttf */; };
 		3D81A3AE25D37BF100C9DA40 /* NetworkErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D81A3AD25D37BF100C9DA40 /* NetworkErrorView.swift */; };
 		3D81A3B125D3821100C9DA40 /* NetworkConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D81A3B025D3821100C9DA40 /* NetworkConnection.swift */; };
-		3DC7C67425D47FB4007762A1 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC7C67325D47FB4007762A1 /* Currency.swift */; };
 		3DC7C67725D48012007762A1 /* Converter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC7C67625D48012007762A1 /* Converter.swift */; };
 		3DC7C67C25D482D2007762A1 /* ConverterVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC7C67B25D482D2007762A1 /* ConverterVM.swift */; };
 		4FD41D950D3852BC20B58558 /* Pods_Currenciator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96D455D5ED23D01832253399 /* Pods_Currenciator.framework */; };
@@ -38,6 +38,7 @@
 		3D551D6325D6EB8100677C9C /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 		3D551D6625D6F3B700677C9C /* ServerResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerResponse.swift; sourceTree = "<group>"; };
 		3D551D6925D7199800677C9C /* CountryVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryVM.swift; sourceTree = "<group>"; };
+		3D551D6E25D73EF300677C9C /* Conversion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conversion.swift; sourceTree = "<group>"; };
 		3D81A37C25D36BA900C9DA40 /* Currenciator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Currenciator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D81A37F25D36BA900C9DA40 /* CurrenciatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrenciatorApp.swift; sourceTree = "<group>"; };
 		3D81A38125D36BA900C9DA40 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -51,7 +52,6 @@
 		3D81A3A825D379A100C9DA40 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
 		3D81A3AD25D37BF100C9DA40 /* NetworkErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrorView.swift; sourceTree = "<group>"; };
 		3D81A3B025D3821100C9DA40 /* NetworkConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConnection.swift; sourceTree = "<group>"; };
-		3DC7C67325D47FB4007762A1 /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
 		3DC7C67625D48012007762A1 /* Converter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Converter.swift; sourceTree = "<group>"; };
 		3DC7C67B25D482D2007762A1 /* ConverterVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConverterVM.swift; sourceTree = "<group>"; };
 		92E9F704B3C2616533C629F1 /* Pods-Currenciator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Currenciator.release.xcconfig"; path = "Target Support Files/Pods-Currenciator/Pods-Currenciator.release.xcconfig"; sourceTree = "<group>"; };
@@ -135,10 +135,9 @@
 		3D81A39025D36DCD00C9DA40 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				3D81A3B025D3821100C9DA40 /* NetworkConnection.swift */,
-				3DC7C67325D47FB4007762A1 /* Currency.swift */,
 				3DC7C67625D48012007762A1 /* Converter.swift */,
 				3D551D6325D6EB8100677C9C /* Country.swift */,
+				3D551D6E25D73EF300677C9C /* Conversion.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -181,6 +180,7 @@
 		3DC7C67925D481CC007762A1 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				3D81A3B025D3821100C9DA40 /* NetworkConnection.swift */,
 				3D0013A625D6E8DD006DAE4E /* Networking.swift */,
 				3D551D6625D6F3B700677C9C /* ServerResponse.swift */,
 			);
@@ -321,6 +321,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D81A38225D36BA900C9DA40 /* ContentView.swift in Sources */,
+				3D551D6F25D73EF300677C9C /* Conversion.swift in Sources */,
 				3D0013A725D6E8DD006DAE4E /* Networking.swift in Sources */,
 				3D00139A25D6E6A2006DAE4E /* CountriesModal.swift in Sources */,
 				3D81A39725D3700400C9DA40 /* CurrenciatorView.swift in Sources */,
@@ -328,7 +329,6 @@
 				3D551D6725D6F3B700677C9C /* ServerResponse.swift in Sources */,
 				3D81A39225D36E0A00C9DA40 /* RoundedContainer.swift in Sources */,
 				3DC7C67725D48012007762A1 /* Converter.swift in Sources */,
-				3DC7C67425D47FB4007762A1 /* Currency.swift in Sources */,
 				3DC7C67C25D482D2007762A1 /* ConverterVM.swift in Sources */,
 				3D551D6A25D7199800677C9C /* CountryVM.swift in Sources */,
 				3D81A3B125D3821100C9DA40 /* NetworkConnection.swift in Sources */,

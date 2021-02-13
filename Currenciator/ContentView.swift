@@ -17,7 +17,7 @@ struct ContentView: View {
             if networkConnection.isConnected {
                 CurrenciatorView(
                     converterVM: ConverterVM(
-                        converter: Converter(currencyA: .test, currencyB: .test)
+                        converter: Converter()
                     )
                 )
             } else {

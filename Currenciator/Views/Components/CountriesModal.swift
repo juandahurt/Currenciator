@@ -9,6 +9,7 @@ import SwiftUI
 
 struct CountriesModal: View {
     var isPresented: Binding<Bool>
+    var onSelectedCountry: (Country) -> Void
     @State var isLoading = true
     @StateObject var countryVM: CountryVM = CountryVM()
     
@@ -24,6 +25,9 @@ struct CountriesModal: View {
                 Spacer()
             }
             Divider()
+        }.onTapGesture {
+            onSelectedCountry(country)
+            isPresented.wrappedValue = false
         }
     }
     
@@ -37,19 +41,24 @@ struct CountriesModal: View {
     }
     
     var countriesContainer: some View {
-        ScrollView {
-            LazyVStack {
-                Group {
-                    if isLoading {
-                        ProgressView()
-                    } else {
-                        ForEach(countryVM.countries) { country in
-                            row(for: country)
+        VStack {
+            Text("Choose a country")
+                .font(.custom("Poppins-SemiBold", size: 16))
+                .padding()
+            ScrollView {
+                LazyVStack {
+                    Group {
+                        if isLoading {
+                            ProgressView()
+                        } else {
+                            ForEach(countryVM.countries) { country in
+                                row(for: country)
+                            }
                         }
                     }
+                    .padding(20)
+                    .frame(maxWidth: .infinity)
                 }
-                .padding(20)
-                .frame(maxWidth: .infinity)
             }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)

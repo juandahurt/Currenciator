@@ -7,10 +7,16 @@
 
 import SwiftUI
 
+enum CountrySelected {
+    case first, second, none
+}
+
 struct CurrenciatorView: View {
     @StateObject var converterVM: ConverterVM
     @State private var value: Int = 0
     @State private var showModal = false
+    @State private var isConverting = false
+    @State var countrySelected: CountrySelected = .none
     
     var helpMessage: some View {
         Text("To change a country, just tap on the one you want to change.")
@@ -33,27 +39,43 @@ struct CurrenciatorView: View {
     var currenciesContainer: some View {
         ZStack {
             RoundedContainer() {
-                VStack(spacing: 35) {
-                    HStack(spacing: 20) {
-                        Image("colombia")
-                            .resizable()
-                            .frame(width: 50, height: 50)
-                            .clipShape(Circle())
-                            .onTapGesture {
-                                showModal = true
+                HStack {
+                    VStack(spacing: 35) {
+                        HStack(spacing: 20) {
+                            Image(converterVM.countryA == nil ? "united-states-of-america" : Country.handleFlagImageName(of: converterVM.countryA!))
+                                .resizable()
+                                .frame(width: 50, height: 50)
+                                .clipShape(Circle())
+                                .onTapGesture {
+                                    showModal = true
+                                    countrySelected = .first
+                                }
+                            CurrencyField(text: "\(converterVM.value) \(converterVM.countryA!.currencyId)", backgroundColor: Color("Background"))
+                        }
+                        HStack(spacing: 20) {
+                            Image(converterVM.countryB == nil ? "united-kingdom" : Country.handleFlagImageName(of: converterVM.countryB!))
+                                .resizable()
+                                .frame(width: 50, height: 50)
+                                .clipShape(Circle())
+                                .onTapGesture {
+                                    showModal = true
+                                    countrySelected = .second
+                                }
+                            ZStack {
+                                Group {
+                                    if isConverting {
+                                        CurrencyField(text: "", backgroundColor: .white)
+                                        ProgressView()
+                                            .progressViewStyle(CircularProgressViewStyle(tint: Color("Blue")))
+                                    } else {
+                                        CurrencyField(text: "\(converterVM.result) \(converterVM.countryB!.currencyId)", backgroundColor: .white)
+                                    }
+                               }
                             }
-                        CurrencyField(text: "\(converterVM.value)", backgroundColor: Color("Background"))
+                        }
                     }
-                    HStack(spacing: 20) {
-                        Image("united-states-of-america")
-                            .resizable()
-                            .frame(width: 50, height: 50)
-                            .clipShape(Circle())
-                            .onTapGesture {
-                                showModal = true
-                            }
-                        CurrencyField(text: "\(converterVM.result)", backgroundColor: .white)
-                    }
+                    Image("Switch")
+                        .padding(.leading)
                 }
             }
             convertButton
@@ -71,8 +93,9 @@ struct CurrenciatorView: View {
                 .font(.custom("Poppins-SemiBold", size: 16))
         }
         .onTapGesture {
+            isConverting = true
             converterVM.convert() {
-                
+                isConverting = false
             }
         }
     }
@@ -93,7 +116,18 @@ struct CurrenciatorView: View {
                     }
                 Spacer()
             }
-            CountriesModal(isPresented: $showModal)
+            CountriesModal(isPresented: $showModal, onSelectedCountry: { country in
+                switch countrySelected {
+                case .first:
+                    converterVM.updateCountryA(newValue: country)
+                    break
+                case .second:
+                    converterVM.updateCountryB(newValue: country)
+                    break
+                case .none:
+                    break
+                }
+            })
         }
     }
 }
