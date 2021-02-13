@@ -40,7 +40,7 @@ struct CurrenciatorView: View {
         ZStack {
             RoundedContainer() {
                 HStack {
-                    VStack(spacing: 35) {
+                    VStack(spacing: 20) {
                         HStack(spacing: 20) {
                             Image(converterVM.countryA == nil ? "united-states-of-america" : Country.handleFlagImageName(of: converterVM.countryA!))
                                 .resizable()
@@ -76,6 +76,10 @@ struct CurrenciatorView: View {
                     }
                     Image("Switch")
                         .padding(.leading)
+                        .onTapGesture {
+                            converterVM.switchCountries()
+                            value = 0
+                        }
                 }
             }
             convertButton
@@ -109,8 +113,9 @@ struct CurrenciatorView: View {
                     .padding(.horizontal, 40)
                 currenciesContainer
                     .padding(.top, 20)
-                    .padding(.bottom, 40)
+                Spacer()
                 NumericKeypad(value: $value)
+                    .padding(.horizontal, 20)
                     .onChange(of: value) { value in
                         converterVM.updateValue(newValue: value)
                     }

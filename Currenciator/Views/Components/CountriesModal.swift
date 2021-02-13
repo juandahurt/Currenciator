@@ -56,7 +56,7 @@ struct CountriesModal: View {
                             }
                         }
                     }
-                    .padding(20)
+                    .padding(.horizontal, 20)
                     .frame(maxWidth: .infinity)
                 }
             }

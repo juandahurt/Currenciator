@@ -31,23 +31,27 @@ class ConverterVM: ObservableObject {
     }
     
     func updateValue(newValue: Int) {
-        converter.value = newValue
+        converter.updateValue(newValue: newValue)
     }
     
     func updateCountryA(newValue: Country) {
-        converter.countryA = newValue
+        converter.updateCountryA(newValue: newValue)
     }
     
     func updateCountryB(newValue: Country) {
-        converter.countryB = newValue
+        converter.updateCountryB(newValue: newValue)
     }
     
     func convert(completion: @escaping () -> Void) {
         converter.convert { response in
             let key = self.countryA!.currencyId + "_" + self.countryB!.currencyId
             let rate = response.results[key]!.val
-            self.converter.result = Double(self.converter.value) * rate
+            self.converter.updateResult(newValue: Double(self.converter.value) * rate)
             completion()
         }
+    }
+    
+    func switchCountries() {
+        converter.switchCountries()
     }
 }

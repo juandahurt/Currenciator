@@ -25,6 +25,7 @@
 		3D81A3A925D379A100C9DA40 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3D81A3A825D379A100C9DA40 /* Poppins-Regular.ttf */; };
 		3D81A3AE25D37BF100C9DA40 /* NetworkErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D81A3AD25D37BF100C9DA40 /* NetworkErrorView.swift */; };
 		3D81A3B125D3821100C9DA40 /* NetworkConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D81A3B025D3821100C9DA40 /* NetworkConnection.swift */; };
+		3DB3EBD825D846B0001429BF /* DecimalNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB3EBD725D846B0001429BF /* DecimalNumber.swift */; };
 		3DC7C67725D48012007762A1 /* Converter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC7C67625D48012007762A1 /* Converter.swift */; };
 		3DC7C67C25D482D2007762A1 /* ConverterVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC7C67B25D482D2007762A1 /* ConverterVM.swift */; };
 		4FD41D950D3852BC20B58558 /* Pods_Currenciator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96D455D5ED23D01832253399 /* Pods_Currenciator.framework */; };
@@ -52,6 +53,7 @@
 		3D81A3A825D379A100C9DA40 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
 		3D81A3AD25D37BF100C9DA40 /* NetworkErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrorView.swift; sourceTree = "<group>"; };
 		3D81A3B025D3821100C9DA40 /* NetworkConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConnection.swift; sourceTree = "<group>"; };
+		3DB3EBD725D846B0001429BF /* DecimalNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecimalNumber.swift; sourceTree = "<group>"; };
 		3DC7C67625D48012007762A1 /* Converter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Converter.swift; sourceTree = "<group>"; };
 		3DC7C67B25D482D2007762A1 /* ConverterVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConverterVM.swift; sourceTree = "<group>"; };
 		92E9F704B3C2616533C629F1 /* Pods-Currenciator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Currenciator.release.xcconfig"; path = "Target Support Files/Pods-Currenciator/Pods-Currenciator.release.xcconfig"; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 		3D81A37E25D36BA900C9DA40 /* Currenciator */ = {
 			isa = PBXGroup;
 			children = (
+				3DB3EBD625D8464C001429BF /* Helpers */,
 				3DC7C67925D481CC007762A1 /* Network */,
 				3DC7C67A25D48249007762A1 /* ViewModels */,
 				3D81A3A025D377F600C9DA40 /* Resources */,
@@ -175,6 +178,14 @@
 				3D81A39F25D377A100C9DA40 /* Fonts */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		3DB3EBD625D8464C001429BF /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				3DB3EBD725D846B0001429BF /* DecimalNumber.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		3DC7C67925D481CC007762A1 /* Network */ = {
@@ -335,6 +346,7 @@
 				3D46CE3425D490A60024EC30 /* CurrencyField.swift in Sources */,
 				3D81A3AE25D37BF100C9DA40 /* NetworkErrorView.swift in Sources */,
 				3D551D6425D6EB8100677C9C /* Country.swift in Sources */,
+				3DB3EBD825D846B0001429BF /* DecimalNumber.swift in Sources */,
 				3D81A39D25D375DA00C9DA40 /* NumericKeypad.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

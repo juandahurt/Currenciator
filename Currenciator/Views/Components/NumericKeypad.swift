@@ -10,6 +10,7 @@ import SwiftUI
 struct NumericKeypad: View {
     var value: Binding<Int>
     private let columns = Array(repeating: GridItem(.flexible()), count: 3)
+    @State private var numberTouched: Int?
     
     func numberTouched(number: Int) {
         if value.wrappedValue > 0 {
@@ -34,24 +35,35 @@ struct NumericKeypad: View {
         }
     }
     
+    func numberContainer(number: Int) -> some View {
+        let userIsTouchingTheNumber = numberTouched == number
+        return ZStack {
+            Rectangle()
+                .fill(Color("Background"))
+                .frame(height: 60)
+            Text("\(number)")
+        }
+        .scaleEffect(userIsTouchingTheNumber ? CGSize(width: 1.2, height: 1.2) : CGSize(width: 1, height: 1))
+        .onTapGesture {
+            numberTouched = number
+            numberTouched(number: number)
+            withAnimation(Animation.linear.delay(0.02)) {
+                numberTouched = nil
+            }
+        }
+    }
+    
     var body: some View {
         LazyVGrid(columns: columns) {
             ForEach(1..<10) { number in
-                Text("\(number)")
-                    .padding(.bottom, 30)
-                    .onTapGesture {
-                        numberTouched(number: number)
-                    }
+                numberContainer(number: number)
             }
             Text("C")
-                .opacity(0.5)
+                .opacity(0.2)
                 .onTapGesture {
                     clearValue()
                 }
-            Text("0")
-                .onTapGesture {
-                    numberTouched(number: 0)
-                }
+            numberContainer(number: 0)
             Image("Delete")
                 .onTapGesture {
                     delete()
