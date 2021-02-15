@@ -22,6 +22,7 @@ struct CountriesModal: View {
                     .clipShape(Circle())
                 Text(country.name)
                     .font(.custom("Poppins-SemiBold", size: 14))
+                    .foregroundColor(Color("Black"))
                 Spacer()
             }
             Divider()
